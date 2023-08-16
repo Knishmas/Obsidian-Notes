@@ -1,0 +1,169 @@
+{
+  "main": {
+    "id": "58806e110fab561b",
+    "type": "split",
+    "children": [
+      {
+        "id": "743b9a8284d9b4db",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "0b7b5158af999f4c",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Data Structures and Algorithms/Graphs/Topological Sort.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "b4afe42ff17682c8",
+    "type": "split",
+    "children": [
+      {
+        "id": "1432592f0fbea678",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "5f3d4e5593e72f44",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "b94f7ef75c811ec6",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "b6f2b1b4effa4f5a",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 200
+  },
+  "right": {
+    "id": "c8dc57b4f45295d9",
+    "type": "split",
+    "children": [
+      {
+        "id": "0cb58269bf6aa4ba",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "8814d8051af3e189",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Data Structures and Algorithms/Graphs/Topological Sort.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "179ad912a5ca5b78",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Data Structures and Algorithms/Graphs/Topological Sort.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "3a45fcfd33d92cb5",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "28fac0095da79b07",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Data Structures and Algorithms/Graphs/Topological Sort.md"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false
+    }
+  },
+  "active": "0b7b5158af999f4c",
+  "lastOpenFiles": [
+    "Data Structures and Algorithms/Graphs/Topological Sort.md",
+    "README.md",
+    "Assets/Pasted image 20230816163339.png",
+    "Assets/Pasted image 20230816163309.png",
+    "Assets/Pasted image 20230816163307.png",
+    "Assets/Pasted image 20230816160450.png",
+    "Assets/Pasted image 20230816160410.png",
+    "Assets/Pasted image 20230816154321.png",
+    "Assets/Pasted image 20230816154205.png",
+    "Assets/Pasted image 20230816153020.png",
+    "Assets/Pasted image 20230816150729.png",
+    "Assets/Pasted image 20230816144425.png",
+    "Assets",
+    "New folder",
+    "g.md",
+    "Untitled.canvas",
+    "Data Structures and Algorithms/Graphs",
+    "Data Structures and Algorithms"
+  ]
+}
