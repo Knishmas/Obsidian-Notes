@@ -1,4 +1,5 @@
 Source: https://www.youtube.com/watch?v=ayW5B2W9hfo&ab_channel=PotatoCoders
+
 # What is it? 
 - A data structure that helps keep track of different groups of items
 - Also allows to quickly merge two groups into one and determine which group of a specific item belongs 
@@ -25,11 +26,24 @@ We can re-arrange the graph as a tree with the representative being the root nod
 - **Parents and children** for any given element we find the representative by traveling upwards towards the root. 
 	**Example**
 	- **find(4) = 0 by the process**:  Parent(4) = 3 ----> Parent(3) = 0       ----> Parent(0) = 9
+
 - We keep doing this and we know when to stop because the parent of a root is itself. 
 - If we can keep track of the parent of every object then we can travel up the tree towards the root
+
+	**Path compression**
+	- Reducing the path when using the find operation so that you don't have to traverse up to root every time. 
+	- Speeds up the find operation & shrinks the height of the tree. 
+		*Example*
+		* If we call find(E) then it will traverse all the up to the root node A. 
+		* Rather than repeating traversal steps, going all the way up to the root node, we can directly point (compress) the visited nodes to the root node. 
+		![[Pasted image 20230819143005.png||400]]
+
 ## Union 
 - If we want to find the union two trees we can set the root of one tree to be the child of the other. 
 - **Union by rank**: The group with the lower rank will always join the group with the higher rank. 
+*What's the purpose of rank in union find?* 
+- Rank prevents the trees from becoming imbalanced.
+- Helps maintain efficient time complexity for union and find operations
 	**Example** 
 	- Union(1,2) -----> Parent(find(2)) = find(1)
 	- The root 5 is given the parent of the other tree with root 0
