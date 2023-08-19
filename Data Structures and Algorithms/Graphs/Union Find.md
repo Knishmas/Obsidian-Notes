@@ -29,6 +29,7 @@ We can re-arrange the graph as a tree with the representative being the root nod
 - If we can keep track of the parent of every object then we can travel up the tree towards the root
 ## Union 
 - If we want to find the union two trees we can set the root of one tree to be the child of the other. 
+- **Union by rank**: The group with the lower rank will always join the group with the higher rank. 
 	**Example** 
 	- Union(1,2) -----> Parent(find(2)) = find(1)
 	- The root 5 is given the parent of the other tree with root 0
