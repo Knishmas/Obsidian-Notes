@@ -10,3 +10,4 @@
 * Pre-visit and Post-visit numbers is extra information that can be stored and utilized. 
 * **Pre-visit**: Tells us when the node is stored on the recursion stack 
 * **Post-visit:** Tells us when the node pops out of the DFS recursion stack. 
+

@@ -13,13 +13,34 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Data Structures and Algorithms/Graphs/Topological Sort.md",
+                "file": "Data Structures and Algorithms/Graphs/Union Find.md",
                 "mode": "source",
                 "source": false
               }
             }
+          },
+          {
+            "id": "dc744f7d35815162",
+            "type": "leaf",
+            "state": {
+              "type": "image",
+              "state": {
+                "file": "Assets/Pasted image 20230818172226.png"
+              }
+            }
+          },
+          {
+            "id": "3fb4f40d3c3c5dc8",
+            "type": "leaf",
+            "state": {
+              "type": "image",
+              "state": {
+                "file": "Assets/Pasted image 20230818174109.png"
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -85,7 +106,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Data Structures and Algorithms/Graphs/Topological Sort.md",
+                "file": "Assets/Pasted image 20230818174109.png",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +123,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Data Structures and Algorithms/Graphs/Topological Sort.md",
+                "file": "Assets/Pasted image 20230818174109.png",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,15 +146,25 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Data Structures and Algorithms/Graphs/Topological Sort.md"
+                "file": "Assets/Pasted image 20230818174109.png"
               }
             }
+          },
+          {
+            "id": "eade3ea94bccb852",
+            "type": "leaf",
+            "state": {
+              "type": "calendar",
+              "state": {}
+            }
           }
-        ]
+        ],
+        "currentTab": 4
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 200,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -142,27 +173,36 @@
       "canvas:Create new canvas": false,
       "daily-notes:Open today's daily note": false,
       "templates:Insert template": false,
-      "command-palette:Open command palette": false
+      "command-palette:Open command palette": false,
+      "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "0b7b5158af999f4c",
+  "active": "3fb4f40d3c3c5dc8",
   "lastOpenFiles": [
+    "Untitled.canvas",
+    "Assets/Pasted image 20230818174109.png",
+    "Assets/Pasted image 20230818172226.png",
+    "Data Structures and Algorithms/Graphs/Union Find.md",
+    "Assets/Pasted image 20230818184159.png",
+    "Assets/Pasted image 20230818174937.png",
+    "Untitled.md",
+    "Data Structures and Algorithms/BFS & DFS/Pre and post DFS.md",
+    "Day Planners/Day Planner-20230818.md",
+    "Day Planners",
+    "Excalidraw/Drawing 2023-08-18 14.41.43.excalidraw.md",
+    "Excalidraw",
     "Data Structures and Algorithms/Graphs/Topological Sort.md",
     "README.md",
+    "Data Structures and Algorithms/BFS & DFS",
     "Assets/Pasted image 20230816163339.png",
     "Assets/Pasted image 20230816163309.png",
     "Assets/Pasted image 20230816163307.png",
     "Assets/Pasted image 20230816160450.png",
     "Assets/Pasted image 20230816160410.png",
     "Assets/Pasted image 20230816154321.png",
-    "Assets/Pasted image 20230816154205.png",
-    "Assets/Pasted image 20230816153020.png",
-    "Assets/Pasted image 20230816150729.png",
-    "Assets/Pasted image 20230816144425.png",
     "Assets",
     "New folder",
     "g.md",
-    "Untitled.canvas",
     "Data Structures and Algorithms/Graphs",
     "Data Structures and Algorithms"
   ]
