@@ -1,5 +1,4 @@
-Source: https://sqlbolt.com/lesson/select_queries_order_of_execution
-
+**Source**: https://sqlbolt.com
 
 # A Complete SELECT query
 
@@ -84,10 +83,34 @@ download_count INTEGER
 ```
 
 # Altering Tables
-**General template**
+## Adding columns
 ```sql 
 ALTER TABLE mytable 
 ADD column _DataType_ _OptionalTableConstraint_ 
 	DEFAULT default_value;
 ```
+**Example**
+```sql
+ALTER TABLE movies
+ADD COLUMN Language TEXT 
+    DEFAULT "English";
+```
+## Removing columns
+```sql
+ALTER TABLE mytable 
+DROP column_to_be_deleted;
+```
+## Renaming the table
+```sql
+ALTER TABLE mytable 
+RENAME TO new_table_name;
+```
 
+# Dropping tables 
+```sql
+DROP TABLE IF EXISTS mytable;
+```
+**Example**
+```sql
+DROP TABLE IF EXISTS boxoffice;
+```
