@@ -64,7 +64,6 @@ WHERE year < 2005;
 ```
 
 # Creating a table
-
 **General template**
 ```sql 
 CREATE TABLE IF NOT EXISTS mytable ( 
@@ -76,3 +75,19 @@ CREATE TABLE IF NOT EXISTS mytable (
 	```
 
 *Example
+```sql
+CREATE TABLE IF NOT EXISTS database(
+name STRING, 
+version FLOAT, 
+download_count INTEGER
+);
+```
+
+# Altering Tables
+**General template**
+```sql 
+ALTER TABLE mytable 
+ADD column _DataType_ _OptionalTableConstraint_ 
+	DEFAULT default_value;
+```
+
