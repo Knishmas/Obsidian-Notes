@@ -1,1 +1,3 @@
-# Obsidian-Notes
+# Obsidian Notes
+- A repository containing all my notes within obsidian from web dev, to data structures and algorithms, to Books I'm reading, etc...
+- 
