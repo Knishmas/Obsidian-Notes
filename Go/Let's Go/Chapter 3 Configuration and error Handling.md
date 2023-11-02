@@ -25,3 +25,14 @@ COLLATE utf8mb4_unicode_ci
 	2. ```go mod download``` downloads all the dependencies within the project. 
 
 # 4.4 Creating a database connection pool
+
+## Connecting web app to database
+```sql.Open()```
+- Function that initializes a new sql.DB object and returns a pool of DB connections. 
+```db, err := sql.Open("mysql", "web:pass@/snippetbox?parseTime=true")```
+- 1st parameter - Driver name. *Find name through the DB's docs*
+- 2nd parameter -  Data source name (DSN) or connection string. Describes how to connect to your DB.
+	- Format of DSN will depend on your driver. *Refer to docs*
+```parseTime=true```
+- Driver specific - converts sql time/date to go time.time. obj. 
+- 
