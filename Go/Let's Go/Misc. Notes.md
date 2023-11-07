@@ -31,6 +31,7 @@ dsn := flag.String("dsn", "web:pass@/snippetbox?parseTime=true", "MySQL data sou
 	fmt.Println(&x) // prints the memory address of x 
 ```
 - **" * "** used to access the value stored at a specific memory address, known as dereferencing.
+*Example:* 
 ```go
 	var x int = 1 
 	var p *int = &x
