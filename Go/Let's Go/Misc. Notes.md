@@ -23,3 +23,16 @@ dsn := flag.String("dsn", "web:pass@/snippetbox?parseTime=true", "MySQL data sou
 - **Value receiver:** The method will operate on a *copy* of the object. Any changes to the object are local to the method and doesn't affect the original object. 
 - **Pointer receiver:** The method will operate directly on the original object. Any changes to the object will change the original. 
 - Practical example: Fetching a user's information and being allowed to change it. We would use a method with a pointer receiver because we want to change the object holding the user's data. 
+## Pointers and references (& and * ) 
+- **"&"** used to get the memory address of a variable, the reference operator. 
+*Example:* 
+```go
+	var x int = 1 
+	fmt.Println(&x) // prints the memory address of x 
+```
+- **" * "** used to access the value stored at a specific memory address, known as dereferencing.
+```go
+	var x int = 1 
+	var p *int = &x
+	fmt.Println(*p*) // prints the value of x 
+```
