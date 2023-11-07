@@ -18,4 +18,8 @@ dsn := flag.String("dsn", "web:pass@/snippetbox?parseTime=true", "MySQL data sou
 	- Makes it easier to organize and manipulate related data.
 	-  Similar to a class in Java 
 
-
+## Value vs Pointer receivers 
+- In Go methods can either have a value or pointer receiver. 
+- **Value receiver:** The method will operate on a *copy* of the object. Any changes to the object are local to the method and doesn't affect the original object. 
+- **Pointer receiver:** The method will operate directly on the original object. Any changes to the object will change the original. 
+- Practical example: Fetching a user's information and being allowed to change it. We would use a method with a pointer receiver because we want to change the object holding the user's data. 
