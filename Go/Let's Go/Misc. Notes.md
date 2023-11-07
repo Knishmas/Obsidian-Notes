@@ -9,3 +9,13 @@ dsn := flag.String("dsn", "web:pass@/snippetbox?parseTime=true", "MySQL data sou
 - The ```dsn``` flag is used  to pass the MYSQL DSN string. If the flag isn't provided, then default value ```web:pass@/snippetbox?parseTime=true``` will be used. 
 - Useful in situations where the MySQL DSN might change based on the environment, or if the user wants to connect to a different database. 
 - The `flag` package in Go provides functionalities to define & manage these flags 
+
+## Structs and interfaces in Go 
+- **Interface:** A set of method signatures that a type must implement. Defines a contract for what a type should do, without saying anything about how to do it. 
+	- They're a way to achieve polymorphism within Go, allowing different types to be used interchangeably if they implement the same interface. Makes code flexible and reusable 
+	- Similar to a an object in Java 
+- **Struct:** A custom data type that groups together fields of different types under a single name. 
+	- Makes it easier to organize and manipulate related data.
+	-  Similar to a class in Java 
+
+
