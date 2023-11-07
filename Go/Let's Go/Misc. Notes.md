@@ -37,3 +37,19 @@ dsn := flag.String("dsn", "web:pass@/snippetbox?parseTime=true", "MySQL data sou
 	var p *int = &x
 	fmt.Println(*p*) // prints the value of x 
 ```
+
+## Receivers and methods 
+- **Receiver:** a special type of parameter within a function that defines the type on which the method can be called on. 
+ *Example:* 
+ ```go
+ func (logger *Logger) Log(message string) {
+    fmt.Println(message)
+}
+```
+- In this example `(logger *Logger)` is our receiver, the Log method may only be called on a Logger type. 
+- `Log` is our Function name and `message string` is our regular parameter, it defines the input of the method. 
+- To call the Logger method, you need to have an instance of Logger (or a pointer to one), and you call it like so: 
+```go 
+logger := &Logger{}
+logger.Log("Hello, world!")
+```
