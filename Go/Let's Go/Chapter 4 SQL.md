@@ -67,3 +67,24 @@ for rows.Next() {
 - *In this example, we're querying a `users` table for `id` and `name` columns. For each row in the result set, we use `rows.Scan` to copy the data into the `id` and `name` variables. We then print out the values*. 
 - *The arguments to row.Scan are `pointers` to the place you want to copy the data into.*
 - *The # of arguments must be exactly the same as the # of columns returned by your statement.*
+- `error.Is()`: Checks if an error is of a specific type of error. 
+	- Takes 2 parameters: (error you want to check, the error type you want to compare it to)
+	- Returns true if it matches the type we compare, false otherwise. 
+
+# 4.8 Multiple-record SQL queries
+- `rows.Err()` a method in Go's database/sql package and is assigned when  an error occurs during the iteration of rows. 
+- It's crucial to include `defer rows.Close()` in our get function because if not then as long as the  resultset is open, it will maintain that database connection using resources and occupying that connection. 
+# 4.9 Transactions and other details
+## Managing null values 
+- Go doesn't do a good job at managing SQL null values 
+- *Example:* *we iterate through rows and one of the rows has a null title. the row.Scan() would return an error because go can't convert null to string. 
+- **Solution:** The easy way is to set all your database columns to NOT NULL along with sensible DEFAULT values as necessary.
+	- OR you could change the field that you're scanning into from a string to a sql.NullString type
+## Transactions 
+- `Exec()`,` Query()` and `QueryRow()` can use *any connection* from the *sql.DB pool*. 
+- There's no guarantee something like two consecutive Exec() commands will use the same connection.
+- This can sometimes be an issue
+	- *Example: For instance, if you lock a table with MySQL’s LOCK TABLES command you must call UNLOCK TABLES on exactly the same connection to avoid a deadlock. *
+- To guarantee the same connection you must wrap multiple statements in a transaction. 
+- **Useful if you want to commit multiple SQL statements as a single atomic action.**
+- 
