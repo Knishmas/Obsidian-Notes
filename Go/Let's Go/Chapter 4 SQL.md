@@ -87,4 +87,7 @@ for rows.Next() {
 	- *Example: For instance, if you lock a table with MySQL’s LOCK TABLES command you must call UNLOCK TABLES on exactly the same connection to avoid a deadlock. *
 - To guarantee the same connection you must wrap multiple statements in a transaction. 
 - **Useful if you want to commit multiple SQL statements as a single atomic action.**
-- 
+
+***Re-visit prepared statements***
+
+
