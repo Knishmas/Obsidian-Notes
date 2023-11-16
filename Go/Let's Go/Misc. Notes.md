@@ -91,5 +91,18 @@ Hello, {{block "name" .}}{{.}}{{end}}!
 ```go
 {{define "name"}}Universe{{end}}`
 ``` 
-- will generate: `Hello Universe`
--
+- *will generate: `Hello Universe`*
+## Dot (.) in Go's text/template package
+ - The dot (`.`) in Go's `text/template` package is a special identifier that represents the current item or data in the context, which can be a variable, a map, a slice, or any other data type.
+- It is used in various parts of the template, such as within actions (`{{with .}}`, `{{range .}}`), or in pipelines (`{{. | printf "%s"}}`). Its value can change depending on the context. For example, in a `range` action, the dot would represent each element of the iterable being processed. Excellent for referencing and manipulating the current context or data within a template.
+ - *Example*
+```go
+go package main
+
+import ( "os" "text/template" )
+
+func main() { 
+t := template.Must(template.New("test").Parse("Hello, {{.}}")) 
+t.Execute(os.Stdout, []string{"World", "Gophers"}) }
+```
+**Output:** "Hello, World Hello, Gophers"
