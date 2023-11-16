@@ -26,3 +26,12 @@
 ## HTML comments 
 - Go's `html/template` always strips your template of any comments.  
 - Avoids XSS attacks when rendering dynamic content.
+
+# 5.2 Template actions and functions
+## Controlling dynamic data with...
+- `{{if}}`,`{{with}}`, &`{{range}}`
+![[Pasted image 20231116102303.png]]
+Notes on the above
+- The  `{{else}}` is optional
+- Empty values(0, nil , interface val, string of length 0) are `false`
+- 
