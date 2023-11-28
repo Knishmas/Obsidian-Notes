@@ -43,3 +43,24 @@ var s []int = x[1:3]
 s[:cap(s)]
 //Extends the slice of s to it's full capacity: [2,3,4,5]
 ```
+
+
+- Shorthand way of creating a slice
+```go 
+var a []int = []int{5,6,7,8,9}
+//Creates an array and then takes a slice of it all. 
+```
+- `append()`: Allows you to append to slices.
+	- Takes 2 parameters: The slice and what you want to append. 
+	- Returns a new slice that includes the appended value. 
+```go 
+b := append(a,10)
+// b = [5,6,7,8,9,10]
+```
+- `make()`: Creates an empty slice of a specific size. 
+	- Takes 2 parameters: slice type and size. 
+```go 
+a := make([]int, 5)
+// a = [0,0,0,0,0]
+//Creates an empty integer slice of size 5. 
+```
