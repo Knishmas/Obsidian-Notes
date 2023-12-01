@@ -79,3 +79,23 @@
 {{end}}
 ```
 
+# 5.3 Caching templates
+- A Go map type looks like this:
+```go
+map[KeyType]ValueType
+```
+- We're going to place the parsed templates within the map so it's quick to retrieve rather than parsing them every single time. 
+*Example*
+```go
+map[string]*template.Template
+```
+- The string is the key and the value is a pointer to template.Template, a struct used to hold the parsed values of the template. 
+
+- `file.Glob()`: Returns the last element of a given file path. 
+*Example*
+```go
+path := "/home/user/example.txt"
+file := filepath.Base(path) 
+fmt.Println(file)
+// prints "example.txt"
+```
