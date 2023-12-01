@@ -99,3 +99,41 @@ file := filepath.Base(path)
 fmt.Println(file)
 // prints "example.txt"
 ```
+
+## Templates and parsing 
+- `template.parseFiles()`: Reads the content of files, parses them into a * template.Template, and returns it. This function is used to prepare templates for execution.
+- **\*template.Template**: A data structure that holds the contents of a parsed template. 
+	- Holds information of the template such as: placeholders(variables),
+	- Structure of the template(indentations, blocks, conditionals, loops), and actions to be performed when executing the template (such as replacing placeholders with actual values)
+
+- `.Execute()`: Apply a parsed template to data and generate an output. 
+	- Takes *2 arguments:* an \**io.Writer* where the output will be written and the *data* to be applied to the template. 
+-  In Go, an `io.Writer` is an interface that represents a destination to which you can write data.  It's a common interface in Go's standard library for which data needs to be written to. 
+*Example*
+- File named "*message.txt*"
+```go 
+{{.Name}} is a {{.Occupation}}
+```
+
+*Main file*
+```go
+type User struct {
+Name string
+Occupation string 
+} 
+
+func main() {
+	user := User{"John Doe", "gardener"}
+	tmp, err := template.ParseFiles("message.txt") 
+	if err != nil { 
+		log.Fatal(err) 
+	}
+	err2 := tmp.Execute(os.Stdout, user) 
+	if err2 != nil { 
+	log.Fatal(err2) 
+	}
+}
+```
+- *In this example we're creating an instance of a User, custom struct, with a name and occupation. We're then parsing the message file to get the information of the template as a \*template.Template stored in the variable tmp. We then execute the template with the user data to fill the templates placeholders and the result is:
+   "John Doe is a gardener"*
+- 
