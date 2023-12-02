@@ -91,7 +91,8 @@ map[string]*template.Template
 ```
 - The string is the key and the value is a pointer to template.Template, a struct used to hold the parsed values of the template. 
 
-- `file.Glob()`: Returns the last element of a given file path. 
+- `file.Glob()`:  used to match a pattern and return the names of all files that match the pattern. If there are no matching files, it returns `nil`
+- `.Base()` returns the last element within a file path. 
 *Example*
 ```go
 path := "/home/user/example.txt"
@@ -136,4 +137,29 @@ func main() {
 ```
 - *In this example we're creating an instance of a User, custom struct, with a name and occupation. We're then parsing the message file to get the information of the template as a \*template.Template stored in the variable tmp. We then execute the template with the user data to fill the templates placeholders and the result is:
    "John Doe is a gardener"*
-- 
+
+## Variadic functions (...)
+- A **Variadic function** is one in which can accept an arbitrary amount of arguments.
+-  In Go, you can define a variadic function by using the `...` operator followed by the type of the arguments
+*Example*
+```go 
+func sum(nums ...int){ 
+	total := 0 
+	for _, num := range nums { 
+	    total += num 
+	} 
+	fmt.Println(total)
+} 
+
+func main() { 
+	sum(1, 2) // 3
+	sum(1, 2, 3) // 6
+	sum(1, 2, 3, 4) // 10 
+}
+```
+- *Note: If you have a slice that you'd like to pass to a variadic function, then you would include `...` after the input. This expands the slice into individual arguments that get passed to the function.*
+*Example*
+```go 
+nums := []int{1, 2, 3} 
+sum(nums...)
+```
