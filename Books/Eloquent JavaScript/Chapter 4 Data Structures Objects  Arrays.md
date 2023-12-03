@@ -73,3 +73,11 @@ let numbers = [5,1,7]
 console.log(max(...numbers))
 //Output: 7 
 ```
+
+## The Math object 
+- Acts as a namespace for various related functions that *don't have global bindings*. 
+*Why is it beneficial that all of its content is within an object and not globally binded?*
+- Too many globally binds can *pollute* the space and you're more likely to overwrite variables the more global bindings you have.  
+*Example*: You want to write a var max, since JavaScript's max is tucked into the Math object it won't be overwritten.
+- Javascript will warn you if you are defining a binding with a name that's already taken, but only for `let` & `const` not with `var` & `func()`. 
+- The Math object contains: `PI` ,`cos`, `sin`, `tan`, & their inverses. 
