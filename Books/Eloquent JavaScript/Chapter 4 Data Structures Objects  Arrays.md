@@ -81,3 +81,58 @@ console.log(max(...numbers))
 *Example*: You want to write a var max, since JavaScript's max is tucked into the Math object it won't be overwritten.
 - Javascript will warn you if you are defining a binding with a name that's already taken, but only for `let` & `const` not with `var` & `func()`. 
 - The Math object contains: `PI` ,`cos`, `sin`, `tan`, & their inverses. 
+
+## Destructing 
+- Allows you to unpack values from arrays or properties from objects into distinct variables. 
+- The benefit to this is that it makes code cleaner and easier to read. 
+
+- **Array Destructuring**
+```javascript
+const date =['1970', '12', '01']
+const [year, month, date] = date; 
+console.log(year); // 1970
+console.log(month); // 12
+console.log(date); // 01
+``` 
+
+ **Object Destructuring** 
+ ```javascript
+const note = {
+	id: 1, 
+	title: 'First note',
+	date: '01/01/1970',
+}; 
+
+const {id, title, date} = note; 
+console.log(id); // 1
+console.log(title); // "First note"
+console.log(date); // "01/01/1970"
+```
+
+**Nested Destructuring**
+- You can also destructure nested arrays and objects. 
+```javascript 
+const nestedArray = [1,2, [3,4], 5]
+const [one, two, [three, four], five] = nestedArray;
+console.log(one,two,three,four,five)// 1,2,3,4,5
+```
+
+**Rest Parameter(...) Destructuring**
+```javascript 
+const baz = ["one", "two", "three", "four"]; 
+const [a,b, ...rest] = baz; 
+console.log(a); //one
+console.log(b); //two
+console.log(c); // ["three", "four"]
+```
+
+**Using destructuring with functions**
+*Example*
+```javascript 
+function sum([a,b]){
+	return a + b; 
+}
+
+let numbers = [1,2]
+console.log(sum(numbers)) // 3
+```
