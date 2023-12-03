@@ -54,3 +54,22 @@ for( let entry of JOUNRNAL){
 	console.log("found journal entry")
 }
 ```
+
+## Rest Parameters 
+- **Rest function**: A function in which is able to take in any number of arguments utilizing the `...` syntax. (placed before)
+*Example*
+```javascript 
+function max(...numbers){
+	... 
+	//Takes the maximum number of all the inputs. 
+}
+	console.log(max(4,1,9,-2))
+	//output: 9
+```
+- *Note: when the rest function is called, the rest parameter is bounded to an array of the arguments. If there's other parameters before it, they won't be part of the array.*
+- You can use the same `...` notation to call an array of arguments to the rest function
+```javascript
+let numbers = [5,1,7]
+console.log(max(...numbers))
+//Output: 7 
+```
