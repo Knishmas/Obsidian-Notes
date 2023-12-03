@@ -26,6 +26,21 @@ var arr3 = arr1.concat(arr2);
 console.log(arr3); // [1, 2, 3, 4, 5, 6]
 ```
 - *Note:* if you push an element that isn't an array to concat() then it will push that item into the array like it was a single element array. 
+
+## Strings & their properties
+
+- Values of type string, number, and Boolean _are not objects_. Although they do have properties, properties which are _immutable and cannot change_.
+- For example String has the `.length` & `toUpperCase` property, but if you try to add new properties nothing will happen.
+_Example_
+```javascript 
+let kim = "Kim";  
+kim.age == 88; 
+console.log(kime.age); 
+// -> undefined
+```
+
+- Some string properties are: `slice(), indexOf(), time(), padStart(), join(), & repeat()`.
+
 ## Array Loops 
 - Traditional for i...
 ```javascript
