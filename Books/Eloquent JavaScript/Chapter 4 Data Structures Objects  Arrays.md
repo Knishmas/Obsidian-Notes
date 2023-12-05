@@ -136,3 +136,20 @@ function sum([a,b]){
 let numbers = [1,2]
 console.log(sum(numbers)) // 3
 ```
+
+*Note: If you try to destructure null or undefined you'll get an error.*
+
+## JSON 
+- Because properties "grasp" onto their values objects and arrays are store in memory as sequences of bits *holding the adresses* of their content.
+*Example*
+```javascript
+const nested = [[1,2,3,4][5,6]];
+```
+- An array holding an array of items. In memory the array holds the bits to the location of the nested array while also holding bits detailing the index and values within the parent array. 
+- In order to save or transfer this data you must untangle these adresses of memory. 
+- You can do this by serializing the data with JSON. Flattening the data into a description. 
+- **Serialization**: Converting complex data structures or objects into string format into a format that can be saved or sent and then reconstructed later. 
+- JSON is similar to JavaScript's way of writing arrays and objects.
+
+- `JSON.stringify()`: Takes in a JavaScript value and encodes it to a JSON string. 
+- `JSON.parse()`: Takes a string and gives the value encoded. 
