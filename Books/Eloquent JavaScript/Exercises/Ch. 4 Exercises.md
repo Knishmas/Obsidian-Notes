@@ -47,3 +47,68 @@ const sum = (...numbers) => {
 
 console.log('This is the sum of the range array:' + sum(...rangeArray));
 ```
+
+
+**Reverse an array**
+
+```javascript 
+const reverseArray = (arrayInput) => {
+    let reversed = [];
+    const lastIndex = arrayInput.length -1; 
+    
+    for(let i = lastIndex; i >= 0; i--){
+        reversed.push(arrayInput[i])
+    }
+    return reversed;
+}
+
+const reverseInPlace = (arrayInput) => {
+   let left = 0; 
+   let right = arrayInput.length - 1; 
+   
+   while(left < right){
+       let temp = arrayInput[left]; 
+       arrayInput[left] = arrayInput[right]; 
+       arrayInput[right] = temp; 
+       left++; 
+       right--; 
+   }
+   return arrayInput; 
+}
+
+
+console.log(reverseArray([1,2,3,4,5]));
+console.log('reversed in place:' + reverseInPlace([1,2,3,4,5]));
+``` 
+
+**A List**
+*Task*
+- *1. Write a function `arrayToList` that converts an array into a list.*
+- *2. Write a function `listToArray` that converts a list into an array.*
+- *3. Write a helper function `prepend` that adds an element to the front of a list.*
+- *4. Write a helper function `nth` that returns the element at a given position in a list.*
+
+```javascript
+const arrayToList = (arr, obj, index){ 
+	if(index === array.length - 1) return null; 
+	obj.val = arr[index]; 
+	obj.rest = arrayToList(array, obj.rest, index + 1); 
+	return obj; 
+}
+
+const listToArray = (obj, arr) => { 
+	if(obj == null) return arr; 
+	arr.push(obj.value); 
+	return listToArray(obj.rest,arr); 
+}
+
+const prepend = (element, list) => { 
+	return {value: element, rest: list} 
+} 
+
+const nth = (list, n) => {   
+	if (!list) return undefined;  
+	else if (n == 0) return list.value;  
+	else return nth(list.rest, n - 1);
+}
+```
