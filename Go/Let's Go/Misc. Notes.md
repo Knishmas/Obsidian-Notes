@@ -53,3 +53,56 @@ dsn := flag.String("dsn", "web:pass@/snippetbox?parseTime=true", "MySQL data sou
 logger := &Logger{}
 logger.Log("Hello, world!")
 ```
+
+## Templates 
+- A tool used for generating text output 
+- Consists of regular text with actions, special instructions enclosed within `{{}}` 
+- ``{{define}}`` defines a new template that can be invoked later. 
+	- *Example* `{{define "name"}} T1 {{end}}` 
+	- `"name"` is the name of the template, `T1` is the content of the template
+- The defined template can then be invoked using the `{{template}}`
+	- *Example* 	
+```go
+{{define "T1" -}}
+Hello {{ . }}!
+{{- end -}}
+
+{{ template "T1" "World" }}
+{{ template "T1" }}
+{{ template "T1" "everybody" }}
+```
+The output will be: 
+```html
+Hello World!
+Hello <no value>!
+Hello everybody!
+```
+
+- ``{{block}}`` Defines a section of a template that can be overriden by other templates. 
+	- *Example *
+```go
+{{define "base"}}
+Hello, {{block "name" .}}{{.}}{{end}}!
+{{end}}
+{{template "base" "World"}}
+
+```
+- If no  template is provided, the default content of the block (denoted by `{{.}}`) is used.
+```go
+{{define "name"}}Universe{{end}}`
+``` 
+- *will generate: `Hello Universe`*
+## Dot (.) in Go's text/template package
+ - The dot (`.`) in Go's `text/template` package is a special identifier that represents the current item or data in the context, which can be a variable, a map, a slice, or any other data type.
+- It is used in various parts of the template, such as within actions (`{{with .}}`, `{{range .}}`), or in pipelines (`{{. | printf "%s"}}`). Its value can change depending on the context. For example, in a `range` action, the dot would represent each element of the iterable being processed. Excellent for referencing and manipulating the current context or data within a template.
+ - *Example*
+```go
+go package main
+
+import ( "os" "text/template" )
+
+func main() { 
+t := template.Must(template.New("test").Parse("Hello, {{.}}")) 
+t.Execute(os.Stdout, []string{"World", "Gophers"}) }
+```
+**Output:** "Hello, World Hello, Gophers"
