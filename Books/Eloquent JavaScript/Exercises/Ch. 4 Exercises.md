@@ -112,3 +112,24 @@ const nth = (list, n) => {
 	else return nth(list.rest, n - 1);
 }
 ```
+
+**Deep Comparison**
+*Task: Write a function deepEqual that takes two values and returns true if they are the same value or objects with the same properties, where property values are equal when compared with a recursive call to deepEqual. Use the typeof operator to determine if values should be compared directly or if their properties should be compared, and Object.keys to iterate over object properties.*
+```javascript 
+const deepEqual = (obj1, obj2) => {
+	// Check if obj1 and obj2 are the same object
+	if (obj1 === obj2) return true; 
+	// Check if obj1 and obj2 are both objects
+	if (typeof obj1 !== 'object' || obj1 === null || typeof obj2 !== 'object' || obj2 === null) return false; 
+	// Check if obj1 and obj2 have the same number of properties 
+	let keys1 = Object.keys(obj1); 
+	let keys2 = Object.keys(obj2); 
+	if (keys1.length !== keys2.length) return false; 
+	// Check if corresponding properties of obj1 and obj2 are equal 
+	for (let key of keys1) { 
+		if (!keys2.includes(key) || !deepEqual(obj1[key], obj2[key]))return false; 	
+	} 
+	return true; 
+};
+
+```
