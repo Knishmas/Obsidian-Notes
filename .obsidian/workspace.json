@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Books/Eloquent JavaScript/Chapter 5 High-Order Functions.md",
+                "file": "Books/Understanding Distributed Systems/Chapter 1 Introduction.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Books/Eloquent JavaScript/Chapter 5 High-Order Functions.md",
+                "file": "Books/Understanding Distributed Systems/Chapter 1 Introduction.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Books/Eloquent JavaScript/Chapter 5 High-Order Functions.md",
+                "file": "Books/Understanding Distributed Systems/Chapter 1 Introduction.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Books/Eloquent JavaScript/Chapter 5 High-Order Functions.md"
+                "file": "Books/Understanding Distributed Systems/Chapter 1 Introduction.md"
               }
             }
           },
@@ -157,8 +157,12 @@
   },
   "active": "0e447eebaa97422a",
   "lastOpenFiles": [
-    "README.md",
+    "Data Structures and Algorithms/BFS & DFS/Pre and post DFS.md",
+    "Data Structures and Algorithms/Trees/Trees Cheat Sheet.md",
+    "Assets/Pasted image 20231211213650.png",
     "Books/Eloquent JavaScript/Chapter 5 High-Order Functions.md",
+    "Data Structures and Algorithms/Trees",
+    "README.md",
     "Assets/Pasted image 20230818174109.png",
     "Day Planners/Day Planner-20231210.md",
     "Untitled.canvas",
@@ -167,7 +171,6 @@
     "Assets/Pasted image 20230818184159.png",
     "Assets/Pasted image 20230818174937.png",
     "Untitled.md",
-    "Data Structures and Algorithms/BFS & DFS/Pre and post DFS.md",
     "Day Planners/Day Planner-20230818.md",
     "Day Planners",
     "Excalidraw/Drawing 2023-08-18 14.41.43.excalidraw.md",
@@ -179,7 +182,6 @@
     "Assets/Pasted image 20230816163307.png",
     "Assets/Pasted image 20230816160450.png",
     "Assets/Pasted image 20230816160410.png",
-    "Assets/Pasted image 20230816154321.png",
     "Assets",
     "New folder",
     "g.md",
