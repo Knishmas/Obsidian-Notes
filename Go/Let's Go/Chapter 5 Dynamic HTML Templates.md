@@ -109,7 +109,8 @@ fmt.Println(file)
 
 - `.Execute()`: Apply a parsed template to data and generate an output. 
 	- Takes *2 arguments:* an \**io.Writer* where the output will be written and the *data* to be applied to the template. 
--  In Go, an `io.Writer` is an interface that represents a destination to which you can write data.  It's a common interface in Go's standard library for which data needs to be written to. 
+		-  In Go, an `io.Writer` is an interface that represents a destination to which you can write data.  It's a common interface in Go's standard library for which data needs to be written to. 
+	- A variable can hold a slice of \*template.Template objects, but the order of them is significant especially when .Execute() is called. It will execute in the order of it. 
 *Example*
 - File named "*message.txt*"
 ```go 
@@ -158,8 +159,19 @@ func main() {
 }
 ```
 - *Note: If you have a slice that you'd like to pass to a variadic function, then you would include `...` after the input. This expands the slice into individual arguments that get passed to the function.*
+
 *Example*
 ```go 
 nums := []int{1, 2, 3} 
 sum(nums...)
 ```
+
+# 5.4 Catching runtime errors 
+- We can use a buffer when rendering a template and check for errors, render the error if there is one, and render the template to the http.ResponseWriter. 
+- If we don't use a buffer then the user can receive an error while getting a 200 OK status and or receive incomplete content. 
+# 5.5 Common Dynamic Data
+- There can be common dynamic data we sometimes would like to include within pages such as profile pictures, user names, or even the date. We can include them within templates to carry over and simplify things.
+# 5.6 Custom template functions
+- **template.FuncMap:** A type of map that associates string key values with *function* values. 
+	- Often used with the html/template & text/template packages that c*an be used to create custom functions* that can be used within HTML/Text templates.
+
