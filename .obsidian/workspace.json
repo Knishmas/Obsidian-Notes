@@ -4,22 +4,57 @@
     "type": "split",
     "children": [
       {
-        "id": "272ffe8c118c3b6c",
+        "id": "743b9a8284d9b4db",
         "type": "tabs",
         "children": [
           {
-            "id": "0e447eebaa97422a",
+            "id": "0b7b5158af999f4c",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Books/Understanding Distributed Systems/Chapter 1 Introduction.md",
+                "file": "Data Structures and Algorithms/Graphs/Union Find.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "dc744f7d35815162",
+            "type": "leaf",
+            "state": {
+              "type": "image",
+              "state": {
+                "file": "Assets/Pasted image 20230818172226.png"
+              }
+            }
+          },
+          {
+            "id": "3fb4f40d3c3c5dc8",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Go/Let's Go/Chapter 5 Dynamic HTML Templates.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "3e80373d21b7e29f",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Go/Let's Go/Chapter 6 Middleware.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -85,7 +120,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Books/Understanding Distributed Systems/Chapter 1 Introduction.md",
+                "file": "Go/Let's Go/Chapter 6 Middleware.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +137,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Books/Understanding Distributed Systems/Chapter 1 Introduction.md",
+                "file": "Go/Let's Go/Chapter 6 Middleware.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +160,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Books/Understanding Distributed Systems/Chapter 1 Introduction.md"
+                "file": "Go/Let's Go/Chapter 6 Middleware.md"
               }
             }
           },
@@ -142,7 +177,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 200,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -155,37 +191,54 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "0e447eebaa97422a",
+  "active": "3e80373d21b7e29f",
   "lastOpenFiles": [
-    "Data Structures and Algorithms/BFS & DFS/Pre and post DFS.md",
     "Data Structures and Algorithms/Trees/Trees Cheat Sheet.md",
-    "Assets/Pasted image 20231211213650.png",
-    "Books/Eloquent JavaScript/Chapter 5 High-Order Functions.md",
     "Data Structures and Algorithms/Trees",
-    "README.md",
-    "Assets/Pasted image 20230818174109.png",
+    "Books/Eloquent JavaScript/Chapter 5 High-Order Functions.md",
+    "Assets/Pasted image 20231211213650.png",
+    "Assets/Pasted image 20231116102303.png",
+    "Day Planners/Day Planner-20240103.md",
+    "Go/Let's Go/Chapter 5 Dynamic HTML Templates.md",
+    "Go/Let's Go/Chapter 6 Middleware.md",
+    "Day Planners/Day Planner-20240102.md",
+    "Books/Understanding Distributed Systems/Chapter 1 Introduction.md",
+    "Day Planners/Day Planner-20240101.md",
+    "Day Planners/Day Planner-20231231.md",
+    "Day Planners/Day Planner-20231230.md",
+    "Day Planners/Day Planner-20231229.md",
+    "Day Planners/Day Planner-20231228.md",
+    "Day Planners/Day Planner-20231227.md",
+    "Day Planners/Day Planner-20231223.md",
+    "Day Planners/Day Planner-20231222.md",
+    "Day Planners/Day Planner-20231221.md",
+    "Day Planners/Day Planner-20231220.md",
+    "Go/Let's Go/Misc. Notes.md",
+    "Day Planners/Day Planner-20231219.md",
+    "Day Planners/Day Planner-20231218.md",
+    "Books/Eloquent JavaScript/Exercises/Ch. 4 Exercises.md",
+    "Day Planners/Day Planner-20231217.md",
     "Day Planners/Day Planner-20231210.md",
+    "Day Planners/Day Planner-20231209.md",
+    "Day Planners/Day Planner-20231208.md",
+    "Day Planners/Day Planner-20231207.md",
+    "Books/Eloquent JavaScript/Exercises",
+    "Books/Eloquent JavaScript/untitled folder",
+    "Books/Eloquent JavaScript",
+    "Books/Understanding Distributed Systems",
+    "Books",
+    "Go/General",
+    "Pasted image 20231116102303.png",
+    "Assets/Pasted image 20230818174109.png",
     "Untitled.canvas",
     "Assets/Pasted image 20230818172226.png",
-    "Data Structures and Algorithms/Graphs/Union Find.md",
     "Assets/Pasted image 20230818184159.png",
     "Assets/Pasted image 20230818174937.png",
-    "Untitled.md",
-    "Day Planners/Day Planner-20230818.md",
     "Day Planners",
-    "Excalidraw/Drawing 2023-08-18 14.41.43.excalidraw.md",
     "Excalidraw",
-    "Data Structures and Algorithms/Graphs/Topological Sort.md",
     "Data Structures and Algorithms/BFS & DFS",
     "Assets/Pasted image 20230816163339.png",
     "Assets/Pasted image 20230816163309.png",
-    "Assets/Pasted image 20230816163307.png",
-    "Assets/Pasted image 20230816160450.png",
-    "Assets/Pasted image 20230816160410.png",
-    "Assets",
-    "New folder",
-    "g.md",
-    "Data Structures and Algorithms/Graphs",
-    "Data Structures and Algorithms"
+    "Assets/Pasted image 20230816163307.png"
   ]
 }

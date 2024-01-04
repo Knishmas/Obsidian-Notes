@@ -26,3 +26,5 @@ _What's a distributed system?_
 - Any change could be a incident and so we want to make sure our system's changes don't negatively effect availability.
   - We can accomplish this by testing.
 - We also need to monitor the system for any decrease in performance and possibly fix with changes.
+
+## 1.6 Anatomy of a distributed system 
