@@ -106,3 +106,22 @@ t := template.Must(template.New("test").Parse("Hello, {{.}}"))
 t.Execute(os.Stdout, []string{"World", "Gophers"}) }
 ```
 **Output:** "Hello, World Hello, Gophers"
+
+##  http.Handler(s)
+- An interface capable of handling http requests. 
+- Defined by the `ServeHTTP(ResponseWriter, *Request)` method. 
+	- Any type that utilizes this method can be considered a http.handler.
+
+*Example*
+```go
+type MyHandler struct{}
+
+func (h MyHandler) ServeHTTP(w http.ResponseWriter, r *http.Request) {
+   fmt.Fprint(w, "Hello, World!")
+}
+```
+- When a requests comes in `"Hello World"` is printed. 
+
+- **Handler Parameters:** `(w http.ResponseWriter, r *http.Request)`
+	- `ResponseWriter:` An interface that allows the handler to construct a HTTP response. Contains methods for setting headers, status code, and writing the response body. 
+	- `*Request`: a pointer to a `Request` object, which contains all the information about the incoming HTTP request, including the method, URL, headers, and body. 
