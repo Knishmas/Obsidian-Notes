@@ -35,3 +35,16 @@ func myMiddleware(next http.Handler) http.Handler {
 		- If it's placed before the servemux handler in the chain, then the middleware will act on all requests, this is useful and common for logging all requests. 
 	- **servemux → myMiddleware → application handler**
 		- In cases where you don't want your middleware acting on every handler, such as authentication (only acting on specific handlers), then you would wrap the specific app handler(s). 
+
+## 6.2 Setting Security Headers 
+
+ - **Content-Security-Policy (CSP)**: This header restricts where your webpage loads its resources from, helping prevent various attacks.
+- **Referrer-Policy**: Controls what information is included in the Referer header when a user leaves your webpage.
+- **X-Content-Type-Options: nosniff**: Instructs browsers not to guess the content-type of the response, preventing content-sniffing attacks.
+-  **X-Frame-Options: deny**: Helps prevent clickjacking attacks in older browsers that don't support CSP headers.
+-  **X-XSS-Protection: 0**: Disables the blocking of cross-site scripting attacks, especially useful when using CSP headers.
+
+- These security headers should be on every request we receive, so we must execute the middleware before our servemux.
+	- *secureHeaders → servemux → application handler.*
+	- To accomplish this, we'll wrap our servemux with the `setHeaders` func. 
+	- 
