@@ -2,6 +2,7 @@
 	- *Analogy:* Think about a postman(middleware) who sends and receives mail between houses in a neighborhood(different parts of an application). 
 	- Middleware could be anything from database access, user authentication, data validation, error handling, etc.
 	- Allows the automation of repetitive tasks. 
+
 ## 6.1 How middleware works
 - *"You can think of a Go web application as a chain of `ServeHTTP()` methods being called one after another"*
 - Our go application listens to requests and they trigger servemux's `ServeHTTP()` method. This finds the request and triggers it's handler's `ServeHTTP()` function.  *A chain of `ServeHTTP()` methods.*
@@ -47,4 +48,36 @@ func myMiddleware(next http.Handler) http.Handler {
 - These security headers should be on every request we receive, so we must execute the middleware before our servemux.
 	- *secureHeaders → servemux → application handler.*
 	- To accomplish this, we'll wrap our servemux with the `setHeaders` func. 
-	- 
+
+- **Flow of Control** 
+	-  *secureHeaders → servemux → application handler → servemux → secureHeaders*
+	- The flow of control describes the sequence of execution in our Go program.
+	- Similar to DFS (refer to: [[Pre and post DFS]] ), code before `next.ServeHTTP()` executes down the chain, and code after it executes when returning up the chain.
+	- We progressively move down the chain with `next.ServeHTTP()` calls until reaching the final handler that produces an actual HTTP response. We then work our way back up the chain. 
+
+ - **Early returns** 
+	- Similar to Depth-First Search (DFS), you can prematurely exit the `ServeHTTP()` chain and return upwards.
+	-  This can be beneficial, for instance, when a user is unauthorized. In such cases, you might want to redirect them to a `403 Forbidden` status and halt further execution down the chain.
+*Example*
+```go 
+func myMiddleware(next http.Handler) http.Handler {  
+	return http.HandlerFunc(func(w http.ResponseWriter,        r *http.Request) {
+	
+		// If the user isn't authorized send a 403 
+		// Forbidden status and return to stop
+		// executing the chain.  
+	if !isAuthorized(r) {
+		w.WriteHeader(http.StatusForbidden)
+		return
+}
+	// Otherwise, call the next handler in the chain.
+	next.ServeHTTP(w, r)
+})
+}
+```
+
+- **Debugging CSP issues**
+	- Use developer tools for debugging Content Security Policy (CSP) issues.
+	- Regularly check logs for unexpected problems.
+	- Blocked resources in Firefox are shown as errors in the console logs.
+
