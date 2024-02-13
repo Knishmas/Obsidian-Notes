@@ -30,6 +30,7 @@ func myMiddleware(next http.Handler) http.Handler {
 ```
 - Anonymizes the function
 - Shorter and most common pattern. 
+*Note:  Functions are not considered types they are function types and therefore can't implement an interface. An `http.Handler` is expected to be a type that has a `ServeHTTP` method, not a function itself. But if we wrap the func with `http.Handler `  it satisfies the `http.Handler` interface.*
 - **Positioning middleware**
 	- *The position of your middleware is important and will effect the behavior of your application.*
 	- **myMiddleware → servemux → application handler**
@@ -81,3 +82,16 @@ func myMiddleware(next http.Handler) http.Handler {
 	- Regularly check logs for unexpected problems.
 	- Blocked resources in Firefox are shown as errors in the console logs.
 
+## 6.3 Request Logging 
+- 
+## 6.4 Panic Recovery 
+*What's a panic?*
+- In Go lang a  panic is what occurs with a function when we receive an unexpected error. 
+- A panic results in the immediate termination of the application. 
+
+*In go lang for every request received to a handler go lang creates a new go routine for it to be handled. This allows concurrency*
+
+- By default go lang will call unwind the stack calling any deferred functions and  log the stack trace leading up to the panic. 
+- If a HTTP request results in a panic then the underlying HTTP is closed, NOT the entire application. 
+- By default a server will give an empty reply if a panic occurs from a request due to the closed connection, but with middleware we can recover the panic and give a more informed reply. 
+- 
