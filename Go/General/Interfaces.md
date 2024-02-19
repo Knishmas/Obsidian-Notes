@@ -1,4 +1,4 @@
-- **Interface:** Similar to a  definition that defines the exact methods another type has.
+- **Interface:** Similar to a definition that defines the exact methods another type has.
 - A *interface* defines actions that a type must be able to perform. If the type can perform all of the interface's actions, then it is said to *follow the interface.*
 - A benefit to interfaces is that you're able to write code that works with any type, without even knowing it, so long as it follows the interface. 
 
