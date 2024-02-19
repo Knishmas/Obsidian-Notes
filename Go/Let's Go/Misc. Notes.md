@@ -111,6 +111,7 @@ t.Execute(os.Stdout, []string{"World", "Gophers"}) }
 - An interface capable of handling http requests. 
 - Defined by the `ServeHTTP(ResponseWriter, *Request)` method. 
 	- Any type that utilizes this method can be considered a http.handler.
+- `ServeHTTP()` is part of the of the `http.Handler` interface, is utilized for processing requests, and generating responses. 
 
 *Example*
 ```go
@@ -125,3 +126,4 @@ func (h MyHandler) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 - **Handler Parameters:** `(w http.ResponseWriter, r *http.Request)`
 	- `ResponseWriter:` An interface that allows the handler to construct a HTTP response. Contains methods for setting headers, status code, and writing the response body. 
 	- `*Request`: a pointer to a `Request` object, which contains all the information about the incoming HTTP request, including the method, URL, headers, and body. 
+
