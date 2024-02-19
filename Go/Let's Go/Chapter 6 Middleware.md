@@ -86,12 +86,16 @@ func myMiddleware(next http.Handler) http.Handler {
 - 
 ## 6.4 Panic Recovery 
 *What's a panic?*
-- In Go lang a  panic is what occurs with a function when we receive an unexpected error. 
-- A panic results in the immediate termination of the application. 
+	- **Panic**: In Go, a panic is an unexpected error that leads to immediate application termination.
+- **Concurrency**: Go handles each request in a new goroutine, allowing for concurrent processing.
+- **Default Behavior**: By default, Go unwinds the stack, calls deferred functions, and logs the stack trace leading to the panic.
+- **HTTP Impact**: A panic in an HTTP request closes the underlying HTTP connection, not the entire application.
+- **Middleware Recovery**: Middleware can be used to recover from a panic and provide a more informative response.
+- **Connection Header**: If a panic occurs, set the connection header to closed.
+- **HTTP/2 Note**: In HTTP/2, the Go HTTP server automatically closes the connection after the response due to the header's connection being set to closed.
 
-*In go lang for every request received to a handler go lang creates a new go routine for it to be handled. This allows concurrency*
+- A panic automatically closes a http connection, however, *manually setting the connection header to closed in middleware can be useful for a couple of reasons:*
+	1. The connection will automatically be terminated after the response it sends. 
+	2. It informs the user that the connection will be closed. 
 
-- By default go lang will call unwind the stack calling any deferred functions and  log the stack trace leading up to the panic. 
-- If a HTTP request results in a panic then the underlying HTTP is closed, NOT the entire application. 
-- By default a server will give an empty reply if a panic occurs from a request due to the closed connection, but with middleware we can recover the panic and give a more informed reply. 
-- 
+
